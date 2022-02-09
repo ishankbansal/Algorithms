@@ -10,7 +10,8 @@ void merge(int *a, int s, int e){
     int temp[100];
 
     while(i <= mid && j <= e){
-        if(a[i] < a[j]){
+        // Stability step
+        if(a[i] <= a[j]){
             temp[k++] = a[i++];
         }
         else{
